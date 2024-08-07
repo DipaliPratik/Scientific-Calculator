@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scientific Calculator</title>
+    <style type="text/css">
+        
+        .cal{
+             position: fixed;
+            background-color: black;
+            height: 650px;
+            width: 400px;
+            left: 200px;
+            top: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+            border-radius: 30px;
+           
+
+        }
+        input[type="button"]{
+            height: 50px;
+            border-radius: 50px;
+            width: 52px;
+            border: 20%;
+            margin: 8px;
+            font-size: 18px;
+           padding-bottom: 20px;
+           padding: 5px;
+           border-radius: 10px;
+        }
+        .output{
+            height: 60px;
+            width: 300px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        #zero{
+            width: 120px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cal" align="center">
+        <form>
+            <div>
+                <input type="text" name="op" class="output" disabled style="background-color: white; font-size: 20px;">
+            </div>
+
+            <div>
+                <input type="button" value="sin" onclick="op.value+='Math.sin('">
+                <input type="button" value="AC" onclick="op.value=''">
+                <input type="button" value="C" onclick="op.value=(op.value).slice(0,-1)">
+                <input type="button" value="%" onclick="op.value +='%'" class="operator">
+                <input type="button" value="/" onclick="op.value +='/'" class="operator">
+            </div>
+             <div>
+                <input type="button" value="pow" onclick="op.value+='Math.pow('">
+                <input type="button" value="π" onclick="op.value+='Math.PI'">
+                <input type="button" value="e" onclick="op.value+='Math.E'">
+                <input type="button" value="(" onclick="op.value+='('">
+                <input type="button" value=")" onclick="op.value+=')'">
+               
+            </div>
+             <div>
+                <input type="button" value="tanh" onclick="op.value+='Math.tanh('">
+                <input type="button" value="sinh" onclick="op.value+='Math.sinh('">
+                <input type="button" value="cosh" onclick="op.value+='Math.cosh('">
+                <input type="button" value="log10" onclick="op.value+='Math.log10('">
+                <input type="button" value="," onclick="op.value+=','">
+               
+
+
+                
+            </div>
+            <div>
+                <input type="button" value="cos" onclick="op.value+='Math.cos('">
+                <input type="button" value="7" onclick="op.value+='7'">
+                <input type="button" value="8" onclick="op.value+='8'">
+                <input type="button" value="9" onclick="op.value+='9'">
+                <input type="button" value="X" onclick="op.value +='*'" class="operator">
+            </div>
+            <div>
+                <input type="button" value="tan" onclick="op.value+='Math.tan('">
+                <input type="button" value="4" onclick="op.value+='4'">
+                <input type="button" value="5" onclick="op.value+='5'">
+                <input type="button" value="6" onclick="op.value+='6'">
+                <input type="button" value="-" onclick="op.value+='-'" class="operator">
+            </div>
+            <div>
+                <input type="button" value="sqrt" onclick="op.value+='Math.sqrt('">
+                <input type="button" name="number" value="1" onclick="op.value+='1'" class="num">
+                <input type="button" name="number" value="2" onclick="op.value+='2'" class="num">
+                <input type="button" name="number" value="3" onclick="op.value+='3'" class="">
+                <input type="button" name="" value="+" onclick="op.value+='+'"  class="operator">
+
+            </div>
+           
+            <div>
+                <input type="button" value="log" onclick="op.value+='Math.log('">
+                <input type="button" value="0" onclick="op.value+='0'" id="zero">
+                <input type="button" value="." onclick="op.value+='.'">
+                <input type="button" value="=" onclick="op.value=eval(op.value)" class="operator">
+            </div>
+
+        </form>
+    </div>
+
+
+</body>
+</html>
